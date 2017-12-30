@@ -6,6 +6,12 @@
              x:Name="BrowseItemsPage">
 	<ContentPage.ToolbarItems>
 		<ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+        <!--<ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/demoImageView"
+        android:src="@drawable/sample1"
+        android:scaleType="fitCenter"/>-->
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
 		<StackLayout>
