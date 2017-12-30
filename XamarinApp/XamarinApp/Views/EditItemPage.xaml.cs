@@ -16,8 +16,8 @@ namespace XamarinApp.Views
 
             var item = new Item
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                Text = "New task",
+                Description = "Task description."
             };
 
             BindingContext = viewModel = new EditItemViewModel(item);

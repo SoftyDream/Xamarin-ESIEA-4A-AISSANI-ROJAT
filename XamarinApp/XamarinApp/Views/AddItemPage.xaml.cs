@@ -15,8 +15,8 @@ namespace XamarinApp
 
             var item = new Item
             {
-                Text = "Enter an Item Name",
-                Description = "Enter an Item description."
+                Text = "New task",
+                Description = "Task description."
             };
 
             viewModel = new AddItemViewModel(item);

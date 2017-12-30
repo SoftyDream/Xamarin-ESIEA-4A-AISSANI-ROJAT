@@ -8,7 +8,7 @@ namespace XamarinApp
     {
         public MainPage()
         {
-            Page itemsPage/*,aboutPage = null*/;
+            Page itemsPage;
 
             switch (Device.RuntimePlatform)
             {
@@ -17,27 +17,16 @@ namespace XamarinApp
                     {
                         Title = "To do list"
                     };
-                    /*aboutPage = new NavigationPage(new AboutPage())
-                    {
-                        Title = "About"
-                    };
-                    itemsPage.Icon = "tab_feed.png";
-                    aboutPage.Icon = "tab_about.png";*/
+                   
                     break;
                 default:
                     itemsPage = new ItemsPage()
                     {
                         Title = "To do list"
                     };
-                    /*
-                    aboutPage = new AboutPage()
-                    {
-                        Title = "About"
-                    };*/
+                    
                     break;
             }
-
-            //Children.Add(aboutPage);
             Children.Add(itemsPage);
 
             Title = Children[0].Title;
