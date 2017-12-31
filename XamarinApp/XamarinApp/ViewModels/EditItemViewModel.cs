@@ -15,6 +15,8 @@ namespace XamarinApp.ViewModels
                 Id = item.Id,
                 Text = item.Text,
                 Description = item.Description,
+                /*Date = item.Date,
+                Time = item.Time,*/
             };
 
             Title = Item?.Text;

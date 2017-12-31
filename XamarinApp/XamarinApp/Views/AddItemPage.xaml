@@ -15,6 +15,10 @@
 			<Entry Text="{Binding Item.Text}" FontSize="Small" />
 			<Label Text="Description" FontSize="Small" />
 			<Editor Text="{Binding Item.Description}" FontSize="Small" Margin="0" />
-		</StackLayout>
+            <!--<Label Text="Date" FontSize="Small" />
+            <Editor Text="{Binding Item.Date}" FontSize="Small" Margin="0" />
+            <Label Text="DayTime" FontSize="Small" />
+            <Editor Text="{Binding Item.Time}" FontSize="Small" Margin="0" />-->
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
