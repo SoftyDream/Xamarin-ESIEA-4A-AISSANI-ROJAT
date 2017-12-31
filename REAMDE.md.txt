@@ -1,0 +1,12 @@
+REAMDE
+
+Before installing our solution, earmark that you'll need to install NuGet Package called "Microsoft.Net.Compilers".
+
+If you are getting trouble after this fix, try those steps :
+
+1) Stop running/debugging your project.
+2) Clear \obj and \bin folders (remove their content)
+3) Run the application as Debug, then in Release mode (it'll generate new content for the previous folders)
+4) Then, re-run as Debug.
+
+Have fun !
