@@ -28,6 +28,7 @@ namespace XamarinApp
                 return; /*Read and Write acces denied. Read OR Write only*/}
             IsBusy = true;
 
+            Items.Clear(); //mandatory to not destroy app content
             var items = await DataStore.GetItemsAsync(true); 
 
             foreach (var item in items)
