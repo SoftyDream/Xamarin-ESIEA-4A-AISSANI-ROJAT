@@ -39,6 +39,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\CustomerDetails.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Persistence\ISQLiteDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -49,8 +50,14 @@
     <Compile Include="ViewModels\EditItemViewModel.cs" />
     <Compile Include="ViewModels\ItemDetailViewModel.cs" />
     <Compile Include="ViewModels\ItemsViewModel.cs" />
+    <Compile Include="Views\CreateCustomer.xaml.cs">
+      <DependentUpon>CreateCustomer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EditItemPage.xaml.cs">
       <DependentUpon>EditItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListOfCustomers.xaml.cs">
+      <DependentUpon>ListOfCustomers.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainPage.cs" />
     <Compile Include="Views\AboutPage.xaml.cs">
@@ -64,6 +71,12 @@
     </Compile>
     <Compile Include="Views\AddItemPage.xaml.cs">
       <DependentUpon>AddItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateOrDeleteCustomer.xaml.cs">
+      <DependentUpon>UpdateOrDeleteCustomer.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +135,24 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\CreateCustomer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListOfCustomers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UpdateOrDeleteCustomer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

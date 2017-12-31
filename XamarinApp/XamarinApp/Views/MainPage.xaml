@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!--
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CrudWithRealmApp"
@@ -9,9 +10,9 @@
         <customerVm:CustomerViewModel/>
     </ContentPage.BindingContext>
 
-    <!--<Label Text="Welcome to Xamarin.Forms!" 
+    <Label Text="Welcome to Xamarin.Forms!" 
            VerticalOptions="Center" 
-           HorizontalOptions="Center" />-->
+           HorizontalOptions="Center" />
 
     <StackLayout Padding="20">
         <Button Text="List Of Customers"
@@ -22,4 +23,4 @@
           Command="{Binding NavToUpdateDeleteCommand}"/>
     </StackLayout>
 
-</ContentPage>
+</ContentPage>-->
