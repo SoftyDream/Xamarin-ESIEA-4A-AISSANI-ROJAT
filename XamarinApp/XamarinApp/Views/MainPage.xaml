@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CrudWithRealmApp"
+             x:Class="CrudWithRealmApp.MainPage"
+             xmlns:customerVm="clr-namespace:CrudWithReamApp.ViewModels">
+
+    <ContentPage.BindingContext>
+        <customerVm:CustomerViewModel/>
+    </ContentPage.BindingContext>
+
+    <!--<Label Text="Welcome to Xamarin.Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />-->
+
+    <StackLayout Padding="20">
+        <Button Text="List Of Customers"
+          Command="{Binding NavToListCommand}"/>
+        <Button Text="Create Customer Details"
+          Command="{Binding NavToCreateCommand}"/>
+        <Button Text="Update or Delete Customer by Id"
+          Command="{Binding NavToUpdateDeleteCommand}"/>
+    </StackLayout>
+
+</ContentPage>
