@@ -21,11 +21,12 @@ namespace XamarinApp
 
             viewModel = new AddItemViewModel(item);
             BindingContext = viewModel;
+            //BindingContext = this;
         }
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-
+            /**/
             await viewModel.ExecuteSaveCommandAsync();
             await Navigation.PopToRootAsync();
 

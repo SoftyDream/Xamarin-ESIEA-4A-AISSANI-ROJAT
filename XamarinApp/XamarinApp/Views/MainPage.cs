@@ -23,7 +23,7 @@ namespace XamarinApp
                    
                     break;
 
-                    //Others
+                //Others
                 default:
                     itemsPage = new ItemsPage()
                     {
