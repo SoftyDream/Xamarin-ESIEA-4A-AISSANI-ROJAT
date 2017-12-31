@@ -10,18 +10,15 @@ namespace XamarinApp
     public partial class ItemDetailPage : ContentPage
     {
         ItemDetailViewModel viewModel;
-
-        // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
         public ItemDetailPage()
         {
             InitializeComponent(); 
-
         }
 
         public ItemDetailPage(string itemId)
         {
             InitializeComponent();
-
+            //BindingContext = viewModel;
             BindingContext = this.viewModel = new ItemDetailViewModel(itemId); 
         }
 
@@ -29,9 +26,7 @@ namespace XamarinApp
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
-
-            await this.viewModel.OnAppear();
+             await this.viewModel.OnAppear();
         }
 
         async void DeleteItem_Clicked(object sender, EventArgs e)

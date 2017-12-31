@@ -8,7 +8,7 @@ using Xamarin.Forms;
 namespace XamarinApp
 {
     public class BaseViewModel : INotifyPropertyChanged
-    { //MockStore Xamarin_MVVM_Explained
+    { 
         public MockDataStore DataStore = new MockDataStore();
         //public IDataStore<Item> DataStore => DependencyService.Get <IDataStore.Get<IDataStore<Item>>() ?? new MockDataStore();
 
@@ -28,7 +28,7 @@ namespace XamarinApp
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName]string propertyName = "",
-            Action onChanged = null)
+            Action onChanged = null)/*...*/
         {
             if (EqualityComparer<T>.Default.Equals(backingStore, value))
                 return false;
@@ -59,8 +59,6 @@ namespace XamarinApp
                 changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
             }
-
-
         }
         #endregion
     }

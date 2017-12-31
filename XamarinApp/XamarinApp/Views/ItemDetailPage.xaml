@@ -4,18 +4,24 @@
              x:Class="XamarinApp.ItemDetailPage"
              Title="{Binding Item.Text}">
     <ContentPage.ToolbarItems>
-        
+
+        <!--<StackLayout Padding="10">
+            <Label Text="{Binding CustomerId}"/>
+            <Label Text="{Binding CustomerName}"/>
+            <Label Text="{Binding CustomerAge}"/>
+        </StackLayout>-->
         <ToolbarItem Text="Delete" Clicked="DeleteItem_Clicked" />
         
-        <ToolbarItem Text="Edit" Clicked="EditItem_Clicked" />
+         <ToolbarItem Text="Edit" Clicked="EditItem_Clicked" />
     
     </ContentPage.ToolbarItems>
     
     
+    
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
+        <StackLayout Spacing="15" Padding="15">
             <Label Text="{Binding Item.Text}" FontSize="Small"/>
-            <Label Text="{Binding Item.Description}" FontSize="Small"/>
+             <Label Text="{Binding Item.Description}" FontSize="Small"/>
         </StackLayout>
     </ContentPage.Content>
     

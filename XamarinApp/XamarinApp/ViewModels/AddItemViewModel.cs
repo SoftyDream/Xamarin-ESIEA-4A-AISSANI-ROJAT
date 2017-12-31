@@ -6,14 +6,17 @@ namespace XamarinApp.ViewModels
     class AddItemViewModel : BaseViewModel
     {
         public Item Item { get; set; }
+
         public Command SaveCommand { get; set; }
         //var notificator = DependencyService.Get<IToastNotificator>();
 
 
         public AddItemViewModel(Item item = null)
         {
-            Title = item?.Text;
-            Item = item;
+            Title = item?.Text; //Get title page name as item's one
+
+            Item = item; //Load concerned item
+
             SaveCommand = new Command(async () => await ExecuteSaveCommandAsync());
         }
 

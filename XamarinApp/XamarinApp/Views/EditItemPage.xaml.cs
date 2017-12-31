@@ -20,13 +20,15 @@ namespace XamarinApp.Views
                 Description = "Task description."
             };
 
+
+
             BindingContext = viewModel = new EditItemViewModel(item);
         }
 
         public EditItemPage(EditItemViewModel viewModel)
         {
             InitializeComponent();
-
+            //BindingContext = viewModel;
             BindingContext = this.viewModel = viewModel;
         }
 

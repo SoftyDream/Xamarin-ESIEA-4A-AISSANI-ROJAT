@@ -25,10 +25,10 @@ namespace XamarinApp
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-        //  MessagingCenter.Send(this, "AddItem", viewModel.Item);
-        //  viewModel.SaveCommand.Execute(null);
+
             await viewModel.ExecuteSaveCommandAsync();
             await Navigation.PopToRootAsync();
+
         }
     }
 }

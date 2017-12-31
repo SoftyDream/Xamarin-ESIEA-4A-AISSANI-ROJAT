@@ -5,7 +5,7 @@
 		     Title="Add a new task ?">
     
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Text="Save task" Clicked="Save_Clicked" />
+		  <ToolbarItem Text="Save task" Clicked="Save_Clicked" />
 	</ContentPage.ToolbarItems>
     
     
@@ -13,7 +13,7 @@
 		<StackLayout Spacing="15" Padding="15">
 			<Label Text="Task" FontSize="Small" />
 			<Entry Text="{Binding Item.Text}" FontSize="Small" />
-			<Label Text="Description" FontSize="Small" />
+			 <Label Text="Description" FontSize="Small" />
 			<Editor Text="{Binding Item.Description}" FontSize="Small" Margin="0" />
             <!--<Label Text="Date" FontSize="Small" />
             <Editor Text="{Binding Item.Date}" FontSize="Small" Margin="0" />

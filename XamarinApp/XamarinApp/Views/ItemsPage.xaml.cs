@@ -13,7 +13,7 @@ namespace XamarinApp
         public ItemsPage()
         {
             InitializeComponent();
-
+            //BindingContext = viewModel;
             BindingContext = viewModel = new ItemsViewModel();
         }
 
@@ -24,8 +24,6 @@ namespace XamarinApp
                 return;
 
             await Navigation.PushAsync(new ItemDetailPage(item.Id));
-
-            // Manually deselect item
             ItemsListView.SelectedItem = null;
         }
 
@@ -34,6 +32,7 @@ namespace XamarinApp
             await Navigation.PushAsync(new AddItemPage());
         }
 
+        //@Override
         protected override void OnAppearing()
         {
             base.OnAppearing();

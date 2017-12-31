@@ -19,7 +19,7 @@ namespace XamarinApp.ViewModels
                 Time = item.Time,*/
             };
 
-            Title = Item?.Text;
+            Title = Item?.Text; //Set title as task's name
 
             UpdateCommand = new Command(async () => await ExecuteUpdateCommandAsync());
         }

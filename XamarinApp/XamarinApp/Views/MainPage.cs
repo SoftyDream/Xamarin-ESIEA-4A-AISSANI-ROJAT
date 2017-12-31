@@ -4,21 +4,26 @@ using Xamarin.Forms;
 
 namespace XamarinApp
 {
-    public class MainPage : TabbedPage
+
+    public class MainPage : TabbedPage //Navigating between pages using tabs
     {
         public MainPage()
         {
+
             Page itemsPage;
 
             switch (Device.RuntimePlatform)
             {
-                case Device.iOS:
+                case Device.iOS: //iOS Running platform
+
                     itemsPage = new NavigationPage(new ItemsPage())
                     {
                         Title = "To do list"
                     };
                    
                     break;
+
+                    //Others
                 default:
                     itemsPage = new ItemsPage()
                     {
@@ -27,15 +32,7 @@ namespace XamarinApp
                     
                     break;
             }
-            Children.Add(itemsPage);
-
-            Title = Children[0].Title;
-        }
-
-        protected override void OnCurrentPageChanged()
-        {
-            base.OnCurrentPageChanged();
-            Title = CurrentPage?.Title ?? string.Empty;
+            Children.Add(itemsPage); //Page in Page
         }
     }
 }

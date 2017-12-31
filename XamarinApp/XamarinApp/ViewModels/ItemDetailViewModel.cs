@@ -5,6 +5,8 @@ namespace XamarinApp
 {
     public class ItemDetailViewModel : BaseViewModel
     {
+        public Command DeleteCommand { get; set; }
+        string itemId;
         public Item _Item;
         public Item Item
         {
@@ -17,10 +19,7 @@ namespace XamarinApp
                 SetProperty(ref _Item, value);
             }
         }
-
-        public Command DeleteCommand { get; set; }
-
-        string itemId;
+        
 
         public ItemDetailViewModel(string itemId)
         {
@@ -28,15 +27,16 @@ namespace XamarinApp
             DeleteCommand = new Command(async () => await ExecuteDeleteCommandAsync());
         }
 
-        public async Task OnAppear()
-        {
-            Item = await DataStore.GetItemAsync(itemId);      
-            
-        }
-
         public async Task ExecuteDeleteCommandAsync()
         {
             await DataStore.DeleteItemAsync(Item.Id);
+        }
+
+        public async Task OnAppear()
+        {
+
+            Item = await DataStore.GetItemAsync(itemId);
+
         }
 
     }

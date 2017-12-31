@@ -9,11 +9,14 @@ namespace XamarinApp
     {
         public AboutViewModel()
         {
-            Title = "About";
-
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+            InitializeComponent();
+           
         }
 
-        public ICommand OpenWebCommand { get; }
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
